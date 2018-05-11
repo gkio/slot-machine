@@ -19,8 +19,8 @@ export class SlotFactory {
         return this.won =  Math.random() * 100 >= this.chanceOfWinning;
     }
 
-    public changeChanceOfWinning = (winningChance) => {
-        this.chanceOfWinning = winningChance;
+    public changeChanceOfWinning = (winningChance:string) => {
+        this.chanceOfWinning = parseInt(winningChance);
     }
 
     private _setNumbers() {

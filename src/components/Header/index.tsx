@@ -7,7 +7,7 @@ type HeaderState = {
 }
 
 type HeaderProps = {
-    changeChanceOfWinning: () => void;
+    changeChanceOfWinning: (winningChance) => void;
 }
 
 export class Header extends React.Component<HeaderProps, HeaderState> {
@@ -31,7 +31,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         if (value) {
             this.setState(
                 {chanceIsSet: true},
-                () => changeChanceOfWinning()
+                () => changeChanceOfWinning(value)
             )
         }
     }

@@ -9,8 +9,13 @@ import {Wheel} from '@Components/Wheel';
 import {PlayBtn} from '@Components/Play';
 import './main.scss';
 
+type AppState = {
+    spin: boolean;
+    modalVisible: boolean;
+}
+
 @observer
-class App extends React.Component<{ appState: SlotFactory }, {}> {
+class App extends React.Component<{ appState: SlotFactory }, AppState> {
     state = {
         spin: false,
         modalVisible: false,
@@ -20,19 +25,19 @@ class App extends React.Component<{ appState: SlotFactory }, {}> {
         this.setState(({spin}) => {
             return ({spin: !spin});
         });
-    }
+    };
 
     animationEnd = () => {
         this.toggleSpin();
         this.toggleModalVisibility();
         this.props.appState.getNumbers();
-    }
+    };
 
     toggleModalVisibility = () => {
         this.setState(({modalVisible}) => {
             return ({modalVisible: !modalVisible});
         });
-    }
+    };
 
     render() {
         const {wheels, won, changeChanceOfWinning} = this.props.appState;
