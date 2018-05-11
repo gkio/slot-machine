@@ -16,7 +16,7 @@ export class SlotFactory {
     }
 
     private _isWon() {
-        return this.won =  Math.random() * 100 >= this.chanceOfWinning;
+        return this.won =  Math.random() * 100 < this.chanceOfWinning;
     }
 
     public changeChanceOfWinning = (winningChance:string) => {
