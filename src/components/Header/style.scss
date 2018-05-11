@@ -1,0 +1,49 @@
+.header {
+  max-width: 400px;
+  margin: 0 auto;
+
+  &_label {
+    font-size: 45px;
+    text-align: center;
+    margin: 25px 0;
+    font-weight: 300;
+  }
+
+  &_block {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    margin-left: 25%;
+    align-content: flex-end;
+    &_wrapper {
+      display: flex;
+      flex: 0 0 70%;
+      flex-wrap: wrap;
+      &-label {
+        text-align: center;
+        width: 100%;
+        color: #333;
+        margin: 5px 0;
+      }
+      &-input {
+        width: 100%;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 3px;
+        border: 1px solid #333;
+      }
+    }
+    &-btn {
+      flex: 0 0 calc(30% - 10px);
+      margin-left: 10px;
+      align-self: flex-end;
+      button {
+        width: 60%;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 3px;
+        border: 1px solid #333;
+      }
+    }
+  }
+}

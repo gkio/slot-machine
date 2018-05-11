@@ -1,0 +1,16 @@
+.play-btn{
+  font-size: 70px;
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 7px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: block;
+  padding: 10px 0;
+  width: 50%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
